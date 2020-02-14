@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/Quiz.scss'
 
 import Progress from './Progress'
 import Question from './Question'

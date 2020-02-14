@@ -6,19 +6,19 @@ const quizQuestions = [
     answers: [
       {
         type: 'Gryffindor',
-        content: 'Wood: Ash - Core: Unicorn tail hairs',
+        content: 'Ash with Unicorn tail hairs',
       },
       {
         type: 'Slytherin',
-        content: 'Wood: Aspen - Core: Dragon heartstring',
+        content: 'Aspen with Dragon heartstring',
       },
       {
         type: 'Ravenclaw',
-        content: 'Wood: Acacia - Core: Dragon heartstring',
+        content: 'Acacia with Dragon heartstring',
       },
       {
         type: 'Hufflepuff',
-        content: 'Wood: Alder - Core: Phoenix feathers',
+        content: 'Alder with Phoenix feathers',
       },
     ],
   },

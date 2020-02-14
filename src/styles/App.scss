@@ -63,53 +63,6 @@ body {
   }
 }
 
-  .quiz-container {
-    width: 100%;
-    min-height: 65vh;
-    background-color: #f1f2f6dc;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: black;
-
-    .progress {
-      width: 100%;
-      padding: 5px 35px;
-      border: 1px solid #718093;
-      border-radius: 5px;
-      h2{
-        letter-spacing: 3px;
-        font-family: $font-title;
-        font-weight: 400;
-        color: #2f3640;
-        font-size: 1rem;
-      }
-    }
-
-    .questions {
-      width: 100%;
-      border: 1px solid #718093;
-      border-radius: 5px;
-      min-height: 25vh;
-      background: ghostwhite;
-      padding: 10px 35px;
-      
-    }
-
-    .answerOption {
-      width: 100%;
-      display: inline-flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-
-      span {
-        width: 24%;
-        height: 250px;
-        border: 1px solid #718093;
-        border-radius: 4px;
-      }
-    }
-
-  }
+  
 
 }

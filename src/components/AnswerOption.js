@@ -10,7 +10,7 @@ function AnswerOption({ answerType, answerContent, answer }) {
         value={answerType}
       />
       <label className='radioLabel' htmlFor={answerType}>
-        {answer}
+        {answerContent}
       </label>
     </li>
   )
