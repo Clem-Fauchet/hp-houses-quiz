@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import quizHouses from '../api/quizHouses'
+import '../styles/Results.scss'
 
 import GryfDisplay from './GryfDisplay'
 import SlythDisplay from './SlythDisplay'
