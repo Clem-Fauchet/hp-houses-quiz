@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|family=Kanit:400,700|Sriracha&display=swap');
+
+
+$font-title: 'Sriracha', cursive;
+$font: 'Kanit', sans-serif;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: 
+  linear-gradient(90deg, #0000008c 0%, rgba(33,29,37,0.882791) 47%, #1f0e0896 100%), url('./assets/bg.png') ;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+.container {
+  font-family: $font-title;
+  color: ghostwhite;
+  width: 70vw;
+  min-height: 85vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+  .title {
+    width: 70%;
+    height: 120px;
+    background-color: #2f3542;
+    text-align: center;
+   
+    h1 {
+      font-size: 2rem;
+      font-family: 'Comfortaa', cursive;
+      -webkit-text-stroke-width:3px;
+      -webkit-text-stroke-color: #f1f2f66b;
+      text-transform: uppercase;
+      box-shadow: 0px 20px 0px 0px #3c43537a;
+      padding: 0 5px;
+      line-height: 90px;
+    }
+  }
+  .houses {
+    width: 150px;
+    height: 150px;
+    background: url('./assets/main.png');
+    background-size: cover;
+    box-shadow: 0px 2px 2px #f8f8ff40;
+  
+    
+  }
+}
+
+  .quiz-container {
+    width: 100%;
+    min-height: 65vh;
+    background-color: #f1f2f6dc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: black;
+
+    .progress {
+      width: 100%;
+      padding: 5px 35px;
+      border: 1px solid #718093;
+      border-radius: 5px;
+      h2{
+        letter-spacing: 3px;
+        font-family: $font-title;
+        font-weight: 400;
+        color: #2f3640;
+        font-size: 1rem;
+      }
+    }
+
+    .questions {
+      width: 100%;
+      border: 1px solid #718093;
+      border-radius: 5px;
+      min-height: 25vh;
+      background: ghostwhite;
+      padding: 10px 35px;
+      
+    }
+
+    .answerOption {
+      width: 100%;
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      span {
+        width: 24%;
+        height: 250px;
+        border: 1px solid #718093;
+        border-radius: 4px;
+      }
+    }
+
+  }
+
+}
