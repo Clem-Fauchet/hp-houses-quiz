@@ -42,5 +42,30 @@ $font: 'Kanit', sans-serif;
       background:#c1c6db;
     }
   }
+}
+@media screen and (max-width: 500px) {
+  .house {
+    padding : 10px 5px;
+    margin-top: 30px;
+     img{
+       width: 200px;
+       height: 200px;
+     }
 
+     h2 {
+       font-size: 1.55em;
+     }
+
+     .bloc {
+       height: 50vh;
+
+       span.quote {
+         font-size: 1.2em;
+       }
+
+       span.description {
+         font-size: 1em;
+       }
+     }
+  }
 }

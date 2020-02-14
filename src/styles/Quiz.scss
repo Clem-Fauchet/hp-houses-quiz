@@ -99,3 +99,38 @@ $font: 'Kanit', sans-serif;
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .quiz-container {
+    min-height: 55vh;
+    .progress {
+      padding: 3px 18px;
+      h2{ 
+        font-size: 0.85rem;
+      } 
+    }
+    .questions {
+      
+      .question {
+        height: 45%;
+        h2 {
+        font-size: 1em;
+        padding: 5px 5px;
+       }
+      }
+    }
+
+    .answersOption {
+      align-items: center;
+      .answer {
+        width: 49%;
+        height: 140px;
+        margin: 2.5px auto;
+         label {
+           font-size: 1.1em;
+         }
+      }
+
+    }
+  }
+}

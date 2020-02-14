@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import '../styles/Quiz.scss'
 
 import Progress from './Progress'
@@ -7,7 +7,7 @@ import AnswerOption from './AnswerOption'
 
 function Quiz(props) {
   return (
-    <div className='quiz-container'>
+    <Fragment>
       <Progress current={props.questionId} total={props.questionTotal} />
 
       <Question question={props.question} image={props.image} />
@@ -26,7 +26,7 @@ function Quiz(props) {
           )
         })}
       </ul>
-    </div>
+    </Fragment>
   )
 }
 
