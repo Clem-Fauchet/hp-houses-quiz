@@ -2,7 +2,7 @@ const quizHouses = [
   {
     id: 'Gryffindor',
     house: 'Gryffindor',
-    image: 'g - house.png',
+    image: require('../components/assets/gHouse.png'),
     quote:
       '“Gryffindor, where dwell the brave at heart! Their daring nerve and chivalry set Gryffindors apart.”',
     description:
@@ -12,7 +12,7 @@ const quizHouses = [
   {
     id: 'Slytherin',
     house: 'Slytherin',
-    image: 's - house.png',
+    image: require('../components/assets/sHouse.png'),
     quote:
       '“We Slytherins are brave, yes, but not stupid. For instance, given the choice, we will always choose to save our own necks”',
     description:
@@ -22,7 +22,7 @@ const quizHouses = [
   {
     id: 'Hufflepuff',
     house: 'Hufflepuff',
-    image: 'h-house.png',
+    image: require('../components/assets/hHouse.png'),
     quote:
       '“Hufflepuff, where they are just and loyal, those patient Hufflepuffs are true and unafraid of toil.”',
     description:
@@ -32,10 +32,12 @@ const quizHouses = [
   {
     id: 'Ravenclaw',
     house: 'Ravenclaw',
-    image: 'r-house.png',
+    image: require('../components/assets/rHouse.png'),
     quote:
       '“Wise old Ravenclaw, if you’ve a ready mind, where those of wit and learning will always find their kind.”',
     description:
       "Ravenclaw value intelligence, creativity, learning, and wit. Ravenclaws tend to be academically motivated and talented students thus they also pride themselves in being original in their ideas and methods. As it's sometimes the case with intellectuals, they are known to be inclined to dismiss social conventions for the sake of satisfying their own intellectual curiosity. For this reason, they are sometimes thought eccentric or odd, but may end up celebrated or renowned when they manage to come up with new and valuable ideas.",
   },
 ]
+
+export default quizHouses

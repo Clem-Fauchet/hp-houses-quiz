@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import './styles/App.scss'
 import quizQuestions from './api/quizQuestions'
 import Quiz from './components/Quiz'
+import QuizResults from './components/QuizResults'
 
 function App() {
   const [state, setState] = useState({
@@ -16,6 +17,10 @@ function App() {
 
   const [currentAnswer, setCurrentAnswer] = useState({
     answersCount: {},
+  })
+
+  const [stateResult, setStateResult] = useState({
+    result: '',
   })
 
   useEffect(() => {
@@ -50,7 +55,12 @@ function App() {
 
   const selectedAnswer = (e) => {
     setUserAnswer(e.currentTarget.value)
-    setTimeout(() => setNextQuestion(), 300)
+
+    if (state.questionId < quizQuestions.length) {
+      setTimeout(() => setNextQuestion(), 300)
+    } else {
+      setTimeout(() => setResults(getResults()), 300)
+    }
   }
 
   const setNextQuestion = () => {
@@ -79,8 +89,21 @@ function App() {
       ...state,
       answer: [answer],
     })
-    console.log(currentAnswer)
-    console.log(currentAnswer.answersCount)
+  }
+
+  const getResults = () => {
+    const answersCount = currentAnswer.answersCount
+    const answersCountKeys = Object.keys(answersCount)
+    const answersCountValues = answersCountKeys.map((key) => answersCount[key])
+    const maxAnswerCount = Math.max.apply(null, answersCountValues)
+
+    return answersCountKeys.filter(
+      (key) => answersCount[key] === maxAnswerCount
+    )
+  }
+
+  const setResults = (result) => {
+    setStateResult({ ...stateResult, result: result[0] })
   }
 
   return (
@@ -93,15 +116,19 @@ function App() {
       </div>
 
       <div className='quiz-container'>
-        <Quiz
-          answer={state.answer}
-          answerOptions={state.answerOptions}
-          questionId={state.questionId}
-          question={state.question}
-          questionTotal={quizQuestions.length}
-          selectedAnswer={selectedAnswer}
-          image={state.image}
-        />
+        {stateResult.result ? (
+          <QuizResults results={stateResult.result} />
+        ) : (
+          <Quiz
+            answer={state.answer}
+            answerOptions={state.answerOptions}
+            questionId={state.questionId}
+            question={state.question}
+            questionTotal={quizQuestions.length}
+            selectedAnswer={selectedAnswer}
+            image={state.image}
+          />
+        )}
       </div>
     </div>
   )

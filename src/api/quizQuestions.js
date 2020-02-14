@@ -212,7 +212,7 @@ const quizQuestions = [
       {
         type: 'Gryffindor',
         content:
-          'You get your wand out of your pocket and wast a spell, creating a path through the mountain',
+          'You get your wand out of your pocket and cast a spell, creating a path through the mountain',
       },
       {
         type: 'Slytherin',
