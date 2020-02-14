@@ -11,6 +11,10 @@ function App() {
     question: '',
     answerOptions: [],
     answer: '',
+    image: '',
+  })
+
+  const [currentAnswer, setCurrentAnswer] = useState({
     answersCount: {},
   })
 
@@ -40,8 +44,44 @@ function App() {
       ...state,
       question: quizQuestions[0].question,
       answerOptions: shuffledAnswerOptions[0],
+      image: quizQuestions[0].image,
     })
   }, [])
+
+  const selectedAnswer = (e) => {
+    setUserAnswer(e.currentTarget.value)
+    setTimeout(() => setNextQuestion(), 300)
+  }
+
+  const setNextQuestion = () => {
+    const counter = state.counter + 1
+
+    setState({
+      ...state,
+      counter: counter,
+      questionId: state.questionId + 1,
+      question: quizQuestions[counter].question,
+      answerOptions: quizQuestions[counter].answers,
+      image: quizQuestions[counter].image,
+      answer: '',
+    })
+  }
+
+  const setUserAnswer = (answer) => {
+    setCurrentAnswer((prevState) => ({
+      answersCount: {
+        ...prevState.answersCount,
+        [answer]: (currentAnswer.answersCount[answer] || 0) + 1,
+      },
+    }))
+
+    setState({
+      ...state,
+      answer: [answer],
+    })
+    console.log(currentAnswer)
+    console.log(currentAnswer.answersCount)
+  }
 
   return (
     <div className='container'>
@@ -59,6 +99,8 @@ function App() {
           questionId={state.questionId}
           question={state.question}
           questionTotal={quizQuestions.length}
+          selectedAnswer={selectedAnswer}
+          image={state.image}
         />
       </div>
     </div>

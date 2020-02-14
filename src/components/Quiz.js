@@ -10,7 +10,7 @@ function Quiz(props) {
     <div className='quiz-container'>
       <Progress current={props.questionId} total={props.questionTotal} />
 
-      <Question question={props.question} />
+      <Question question={props.question} image={props.image} />
 
       <ul className='answersOption'>
         {props.answerOptions.map((key) => {
@@ -21,6 +21,7 @@ function Quiz(props) {
               answerType={key.type}
               answer={props.answer}
               questionId={props.questionId}
+              selectedAnswer={props.selectedAnswer}
             />
           )
         })}

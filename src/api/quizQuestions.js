@@ -1,8 +1,8 @@
 const quizQuestions = [
   {
     id: 1,
-    question: 'Pick your wand.',
-    image: 'image1.png',
+    question: 'Choose your wand.',
+    image: require('../components/assets/image1.png'),
     answers: [
       {
         type: 'Gryffindor',
@@ -26,7 +26,7 @@ const quizQuestions = [
   {
     id: 2,
     question: "As a quidditch player, what's your favorite position?",
-    image: 'image2.png',
+    image: require('../components/assets/image2.png'),
     answers: [
       {
         type: 'Gryffindor',
@@ -50,7 +50,7 @@ const quizQuestions = [
   {
     id: 3,
     question: "What's your least favorite lesson?",
-    image: 'image3.png',
+    image: require('../components/assets/image3.png'),
     answers: [
       {
         type: 'Gryffindor',
@@ -74,7 +74,7 @@ const quizQuestions = [
   {
     id: 4,
     question: 'What would you do on your first day at Hogwarts?',
-    image: 'image4.png',
+    image: require('../components/assets/image4.png'),
     answers: [
       {
         type: 'Gryffindor',
@@ -100,7 +100,7 @@ const quizQuestions = [
     id: 5,
     question:
       'A trool escaped the dungeon and you find yourself face to face with him, what do you do?',
-    image: 'image5.png',
+    image: require('../components/assets/image5.png'),
     answers: [
       {
         type: 'Gryffindor',
@@ -126,8 +126,8 @@ const quizQuestions = [
 
   {
     id: 6,
-    question: 'you receive a howler from your parents. What for?',
-    image: 'image6.png',
+    question: 'You receive a howler from your parents. What for?',
+    image: require('../components/assets/image6.png'),
     answers: [
       {
         type: 'Gryffindor',
@@ -146,7 +146,7 @@ const quizQuestions = [
       {
         type: 'Hufflepuff',
         content:
-          "you tried to make magic fireworks in your dorm and it didn't go well",
+          "You tried to make magic fireworks in your dorm and it didn't go well",
       },
     ],
   },
@@ -154,7 +154,7 @@ const quizQuestions = [
   {
     id: 7,
     question: "What's your favorite magic object?",
-    image: 'image7.png',
+    image: require('../components/assets/image7.png'),
     answers: [
       {
         type: 'Gryffindor',
@@ -182,7 +182,7 @@ const quizQuestions = [
   {
     id: 8,
     question: 'What are you looking in a friend?',
-    image: 'image8.png',
+    image: require('../components/assets/image8.png'),
     answers: [
       {
         type: 'Gryffindor',
@@ -207,7 +207,7 @@ const quizQuestions = [
     id: 9,
     question:
       'You and your friends went on a trip for the day. Your path ends in front of a mountain with no other way than climbing. What do you do?',
-    image: 'image9.png',
+    image: require('../components/assets/image9.png'),
     answers: [
       {
         type: 'Gryffindor',
@@ -236,7 +236,7 @@ const quizQuestions = [
     id: 10,
     question:
       "One of your friend has been called a 'Mudblood'. What's your reaction?",
-    image: 'image10.png',
+    image: require('../components/assets/image10.png'),
     answers: [
       {
         type: 'Gryffindor',
@@ -264,7 +264,7 @@ const quizQuestions = [
   {
     id: 11,
     question: 'A big party is organized this week, will you go?',
-    image: 'image11.png',
+    image: require('../components/assets/image11.png'),
     answers: [
       {
         type: 'Gryffindor',
@@ -291,7 +291,7 @@ const quizQuestions = [
     id: 12,
     question:
       'You struggle growing Mandragore for your botanic exam, what do you do?',
-    image: 'image12.png',
+    image: require('../components/assets/image12.png'),
     answers: [
       {
         type: 'Gryffindor',
@@ -317,7 +317,7 @@ const quizQuestions = [
   {
     id: 13,
     question: 'Choose one muggle destination you would fly to.',
-    image: 'image13.png',
+    image: require('../components/assets/image13.png'),
     answers: [
       {
         type: 'Gryffindor',
@@ -340,7 +340,7 @@ const quizQuestions = [
   {
     id: 14,
     question: 'What do you like the most about Hogwarts?',
-    image: 'image14.png',
+    image: require('../components/assets/image14.png'),
     answers: [
       {
         type: 'Gryffindor',
@@ -364,7 +364,7 @@ const quizQuestions = [
   {
     id: 15,
     question: 'Worst pet peeves in a person for you?',
-    image: 'image15.png',
+    image: require('../components/assets/image15.png'),
     answers: [
       {
         type: 'Gryffindor',
