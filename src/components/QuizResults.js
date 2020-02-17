@@ -8,15 +8,13 @@ import SlythDisplay from './SlythDisplay'
 import HuffleDisplay from './HuffleDisplay'
 import RavenDisplay from './RavenDisplay'
 
-function QuizResults({ results }) {
+function QuizResults({ results, restart }) {
   const [houses, setHouses] = useState({
     quizHouses: {},
   })
 
   useEffect(() => {
     setHouses({ ...houses, quizHouses: quizHouses })
-    console.log(quizHouses)
-    console.log(results)
   }, [])
 
   switch (results) {
@@ -27,6 +25,7 @@ function QuizResults({ results }) {
           image={quizHouses[0].image}
           quote={quizHouses[0].quote}
           description={quizHouses[0].description}
+          restart={restart}
         />
       )
     case 'Slytherin':
@@ -36,6 +35,7 @@ function QuizResults({ results }) {
           image={quizHouses[1].image}
           quote={quizHouses[1].quote}
           description={quizHouses[1].description}
+          restart={restart}
         />
       )
     case 'Hufflepuff':
@@ -45,6 +45,7 @@ function QuizResults({ results }) {
           image={quizHouses[2].image}
           quote={quizHouses[2].quote}
           description={quizHouses[2].description}
+          restart={restart}
         />
       )
 
@@ -55,6 +56,7 @@ function QuizResults({ results }) {
           image={quizHouses[3].image}
           quote={quizHouses[3].quote}
           description={quizHouses[3].description}
+          restart={restart}
         />
       )
     default:

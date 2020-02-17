@@ -8,9 +8,17 @@ import AnswerOption from './AnswerOption'
 function Quiz(props) {
   return (
     <Fragment>
-      <Progress current={props.questionId} total={props.questionTotal} />
+      <Progress
+        current={props.questionId}
+        total={props.questionTotal}
+        previous={props.previous}
+      />
 
-      <Question question={props.question} image={props.image} />
+      <Question
+        question={props.question}
+        image={props.image}
+        answer={props.answer}
+      />
 
       <ul className='answersOption'>
         {props.answerOptions.map((key) => {

@@ -50,6 +50,7 @@ function App() {
       question: quizQuestions[0].question,
       answerOptions: shuffledAnswerOptions[0],
       image: quizQuestions[0].image,
+      answer: state.answer,
     })
   }, [])
 
@@ -66,15 +67,42 @@ function App() {
   const setNextQuestion = () => {
     const counter = state.counter + 1
 
-    setState({
+    setState((prevState) => ({
       ...state,
       counter: counter,
       questionId: state.questionId + 1,
       question: quizQuestions[counter].question,
       answerOptions: quizQuestions[counter].answers,
       image: quizQuestions[counter].image,
-      answer: '',
-    })
+      answer: prevState.answer,
+    }))
+  }
+
+  const previousQuestion = (answer) => {
+    const counter = state.counter - 1
+
+    if (counter > -1) {
+      setState((prevState) => ({
+        ...state,
+        counter: counter,
+        questionId: state.questionId - 1,
+        question: quizQuestions[counter].question,
+        answerOptions: quizQuestions[counter].answers,
+        image: quizQuestions[counter].image,
+      }))
+
+      setCurrentAnswer((prevState) => ({
+        answersCount: {
+          ...prevState.answersCount,
+          [state.answer]: (currentAnswer.answersCount[state.answer] || 0) - 1,
+        },
+      }))
+
+      setStateResult({
+        ...stateResult,
+        result: '',
+      })
+    }
   }
 
   const setUserAnswer = (answer) => {
@@ -106,6 +134,26 @@ function App() {
     setStateResult({ ...stateResult, result: result[0] })
   }
 
+  const restart = () => {
+    setState({
+      ...state,
+      counter: 0,
+      questionId: 1,
+      question: quizQuestions[0].question,
+      answerOptions: quizQuestions[0].answers,
+      image: quizQuestions[0].image,
+      answer: '',
+    })
+    setCurrentAnswer({
+      ...currentAnswer,
+      answersCount: {},
+    })
+    setStateResult({
+      ...stateResult,
+      result: '',
+    })
+  }
+
   return (
     <div className='container'>
       <div className='header'>
@@ -117,7 +165,7 @@ function App() {
 
       <div className='quiz-container'>
         {stateResult.result ? (
-          <QuizResults results={stateResult.result} />
+          <QuizResults results={stateResult.result} restart={restart} />
         ) : (
           <Quiz
             answer={state.answer}
@@ -127,6 +175,7 @@ function App() {
             questionTotal={quizQuestions.length}
             selectedAnswer={selectedAnswer}
             image={state.image}
+            previous={previousQuestion}
           />
         )}
       </div>

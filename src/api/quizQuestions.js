@@ -115,7 +115,7 @@ const quizQuestions = [
       {
         type: 'Ravenclaw',
         content:
-          "Analyze the situation and see it's best to trap him or to escape",
+          "Analyze the situation and see if it's best to trap him or to escape",
       },
       {
         type: 'Hufflepuff',
