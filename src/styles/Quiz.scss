@@ -24,6 +24,7 @@ $font: 'Kanit', sans-serif;
       color: #2f3640;
       font-weight: 800;
       font-size: 1rem;
+      text-align: right;
     }
 
     .btn-previous {
@@ -40,6 +41,7 @@ $font: 'Kanit', sans-serif;
     border: 1px solid #718093;
     border-radius: 5px;
     background: linear-gradient(90deg, rgba(14, 17, 21, 0.922) 0%, rgba(47, 53, 66, 0.95) 47%, rgba(31, 14, 8, 0.61) 100%);
+    
  
     img {
       width: 100%;
@@ -122,9 +124,9 @@ $font: 'Kanit', sans-serif;
     .questions {
       
       .question {
-        height: 45%;
+        height: 50%;
         h2 {
-        font-size: 1em;
+        font-size: 0.9em;
         padding: 5px 5px;
        }
       }
@@ -137,7 +139,7 @@ $font: 'Kanit', sans-serif;
         height: 155px;
         margin: 2.5px auto;
          label {
-           font-size: 1.1em;
+           font-size: 1em;
          }
       }
 

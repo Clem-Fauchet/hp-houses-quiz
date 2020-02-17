@@ -6,12 +6,22 @@ function SlythDisplay({ house, image, quote, description, restart }) {
       <button className='btn btn-restart' onClick={restart}>
         Restart Quiz
       </button>
-      <div className='house'>
+      <div className='house' style={{ backgroundColor: '#3a923f' }}>
         <img src={image} alt='poster house' />
         <h2>Congrats you belong to {house}! </h2>
-        <div className='bloc'>
-          <span className='quote'>{quote}</span>
-          <span className='description'>{description}</span>
+        <div className='bloc' style={{ backgroundColor: '#29732d' }}>
+          <span
+            className='quote'
+            style={{ backgroundColor: '#17481a', color: 'white' }}
+          >
+            {quote}
+          </span>
+          <span
+            className='description'
+            style={{ backgroundColor: '#17481a', color: 'white' }}
+          >
+            {description}
+          </span>
         </div>
       </div>
     </Fragment>
